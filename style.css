@@ -1,0 +1,188 @@
+/*anims*/
+
+@-webkit-keyframes crawl {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -200px;
+    }
+}
+
+@keyframes crawl {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -200px;
+    }
+}
+
+@-webkit-keyframes crawl-horiz {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 675px 0;
+    }
+}
+
+@keyframes crawl-horiz {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 675px 0;
+    }
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        color: lightgreen;
+    }
+    50% {
+        color: purple;
+    }
+    100% {
+        color: lightgreen;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        color: lightgreen;
+    }
+    50% {
+        color: purple;
+    }
+    100% {
+        color: lightgreen;
+    }
+}
+/*Global*/
+
+html {
+    font-family: Georgia, serif;
+    font-size: 26pt;
+}
+/*bg*/
+
+#bghold {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('https://i.pinimg.com/originals/40/bc/00/40bc003e881752f34d370fba4101d595.gif');
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: hue-rotate(250deg) brightness(135%) contrast(200%);
+    filter: hue-rotate(250deg) brightness(135%) contrast(200%);
+}
+/*  Why not just give the body this image as a background? Then when we
+    upped its contrast, it would up the contrast of every child element... AKA
+    every element!
+    
+    I used this gross "hack" ages ago because iPhone Safari didn't support
+    fixed backgrounds. Turns out that was for a very good reason, but it didn't
+    stop me! */
+/*side boxes*/
+
+.sidebox {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+/*bottom box*/
+
+.bottombox {
+    -webkit-animation: crawl-horiz infinite 2s linear;
+    animation: crawl-horiz infinite 2s linear;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://i.imgur.com/vi06WBf.png');
+    height: 350px;
+}
+/*eyeball*/
+
+.spinner {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    width: 150px;
+    height: 150px;
+}
+
+.spinner svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.spinning {
+    -webkit-animation: rotate linear infinite 20s;
+    animation: rotate linear infinite 20s;
+}
+
+.glare {
+    z-index: 100;
+}
+/*loading screen*/
+
+#coverup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    color: white;
+    z-index: 999;
+}
+
+.infobox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*music lyrics*/
+
+#text {
+    position: fixed;
+    text-align: center;
+    top: 3%;
+    left: 0;
+    right: 0;
+    font-size: 80pt;
+    font-face: "Times New Roman", serif;
+    color: lightgreen;
+    text-shadow: 2px 2px 10px black, 4px 4px 10px black;
+    -webkit-animation: colorchange infinite 2s linear;
+    animation: colorchange infinite 2s linear;
+}
