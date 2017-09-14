@@ -1,2 +1,2 @@
 # rivatez
-rivatez webiste
+rivatez website
