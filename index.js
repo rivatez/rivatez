@@ -1,4 +1,3 @@
-// init vars
 var music = document.querySelector("#eccojam");
 var output = document.querySelector("#text");
 var playing = false;
@@ -18,14 +17,11 @@ function update() {
         playing = true;
     }
     
-    //cleaner loop
-    if (music.currentTime / music.duration >= 0.99) { // HOW DOES VINE GET ITS LOOPS SO PERFECT
+    if (music.currentTime / music.duration >= 0.99) {
         music.currentTime = 0.01;
         music.play();
     }
     
-    /* This is the part where we check the lyric position, Meticulously calculated
-    to be as precise as my ear could get it. */
     if (music.currentTime / music.duration > 0.05 && music.currentTime / music.duration < 0.08) {
         output.innerText = "BEWARE";
     }
@@ -76,6 +72,4 @@ function update() {
     }
     requestAnimationFrame(update);
 }
-
-//requestAnimationFrame(update);
 music.load();

@@ -1,5 +1,3 @@
-/*anims*/
-
 @-webkit-keyframes crawl {
     from {
         background-position: 0 0;
@@ -77,13 +75,11 @@
         color: lightgreen;
     }
 }
-/*Global*/
 
 html {
     font-family: Georgia, serif;
     font-size: 26pt;
 }
-/*bg*/
 
 #bghold {
     position: fixed;
@@ -97,22 +93,12 @@ html {
     -webkit-filter: hue-rotate(250deg) brightness(135%) contrast(200%);
     filter: hue-rotate(250deg) brightness(135%) contrast(200%);
 }
-/*  Why not just give the body this image as a background? Then when we
-    upped its contrast, it would up the contrast of every child element... AKA
-    every element!
-    
-    I used this gross "hack" ages ago because iPhone Safari didn't support
-    fixed backgrounds. Turns out that was for a very good reason, but it didn't
-    stop me! */
-/*side boxes*/
-
 .sidebox {
     width: 200px;
     position: absolute;
     top: 0;
     bottom: 0;
 }
-/*bottom box*/
 
 .bottombox {
     -webkit-animation: crawl-horiz infinite 2s linear;
@@ -124,7 +110,6 @@ html {
     background: url('https://i.imgur.com/vi06WBf.png');
     height: 350px;
 }
-/*eyeball*/
 
 .spinner {
     position: absolute;
@@ -150,7 +135,6 @@ html {
 .glare {
     z-index: 100;
 }
-/*loading screen*/
 
 #coverup {
     position: fixed;
@@ -171,7 +155,6 @@ html {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-/*music lyrics*/
 
 #text {
     position: fixed;
