@@ -16,6 +16,6 @@ function update() {
         playing = true;
     }
    
-    }
     requestAnimationFrame(update);
+     }
 music.load();
