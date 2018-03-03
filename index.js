@@ -14,8 +14,6 @@ function update() {
         music.play();
         document.body.removeChild(document.querySelector("#coverup"));
         playing = true;
-    }
-   
-    requestAnimationFrame(update);
+    
      }
 music.load();
