@@ -6,7 +6,6 @@ music.addEventListener("progress", function(){
     if (music.readyState === 4){
         document.querySelector("#percent").innerText = (music.buffered.end(0) / music.duration)*100;
     }
-});
 
 music.addEventListener("canplaythrough", function(){requestAnimationFrame(update)});
 
