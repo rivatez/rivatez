@@ -18,5 +18,4 @@ function update() {
    
     }
     requestAnimationFrame(update);
-}
 music.load();
